@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Number Style</title>
+</head>
+<body>
+	<script>
+		// Regular expression for matching JavaScript-style numbers
+				const numberRegex = /^[+\-]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][+\-]?\d+)?$/;
+
+
+				const validNumbers = ["+123", "-45.67", "0.123", "12.", ".34", "5e-3", "1E10", "-2.3e-5", ".5", "5."];
+				const invalidNumbers = [".", "abc", "12abc", "e3", "5E-", "+", "-"];
+
+				console.log("Valid Numbers:");
+				validNumbers.forEach((num) => {
+					console.log(`${num}: ${numberRegex.test(num)}`);
+				});
+
+				console.log("\nInvalid Numbers:");
+				invalidNumbers.forEach((num) => {
+				console.log(`${num}: ${numberRegex.test(num)}`);
+				});
+
+	</script>
+</body>
+</html>

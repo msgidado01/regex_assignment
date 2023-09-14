@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quotation Conversion</title>
+</head>
+<body>
+	<script>
+
+function replaceQuotes(text) {
+  const pattern = /(?<!\w)'|'(?!\w)/g;
+	
+  // Replace all matches with a double quote.
+  return text.replace(pattern, '"');
+}
+
+const text = `Hi! Gidado, we have meeting by 2pm. 'If I didn't come on time. Don't wait, 
+proceed with the meeting, 'as usual' I'm having nwetwork gliches he replied It's okay'.`;
+
+const replacedText = replaceQuotes(text);
+console.log(replacedText);
+
+	</script>
+</body>
+</html>

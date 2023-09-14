@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Extracting Substrings</title>
+</head>
+<body>
+	<script>
+
+const inputString = "Euvola is the best team TIIDELab Cohort5 Fellowship";
+
+// Regular expression to match "is," "the," best "team"
+const regex = /best|the|team/;
+
+if (regex.test(inputString)) {
+  console.log("The input string contains one of the specified substrings.");
+} else {
+  console.log("The input string does not contain any of the specified substrings.");
+}
+
+	</script>
+</body>
+</html>
